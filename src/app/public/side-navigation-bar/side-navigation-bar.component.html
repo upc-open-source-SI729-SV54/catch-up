@@ -1,0 +1,27 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="sidenav">
+    <mat-toolbar>Sources</mat-toolbar>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let source of sources">
+        <img [alt]="source.name" height="60" matListItemAvatar>
+
+        <p matListItemLine><span>{{ source.name }}</span></p>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color = "primary">
+
+      <button>
+        <mat-icon aria-label="Sidenav toggle icon">menu</mat-icon>
+      </button>
+
+      <span>CatchUp</span>
+      <span class="spacer"></span>
+      <span>Angular</span>
+    </mat-toolbar>
+    <span>
+      <app-footer-content></app-footer-content>
+    </span>
+  </mat-sidenav-content>
+</mat-sidenav-container>
